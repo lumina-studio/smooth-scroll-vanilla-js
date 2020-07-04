@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smooth scroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="smooth-scroll-wrapper">
+    <div class="content">
+
+        <h1>
+            A wonderful serenity
+        </h1>
+        <div class="img img1"></div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem animi ipsam itaque
+            doloribus aliquid, veniam minus laborum doloremque quos ullam. Quas harum iure
+            optio dolorem ea recusandae blanditiis ipsum praesentium.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+            tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+            voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+            architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+            laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+            ratione suscipit!
+        </p>
+
+        <br>
+        <br>
+
+        <div class="img img2"></div>
+
+        <h1>has taken possession</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto suscipit
+            ducimus nostrum, aut minus eius impedit vero numquam est optio reprehenderit
+            itaque quis eligendi quasi repellendus obcaecati neque dolor ipsam nulla
+            praesentium voluptatum. Est assumenda ea voluptatibus! Eaque quo ducimus, unde
+            maxime enim nesciunt debitis voluptatem fuga obcaecati? Aperiam?
+        </p>
+
+        <div class="img img3"></div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
+            repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
+        </p>
+        <br />
+        <br />
+        <br />
+        <h1>
+            of my entire soul
+        </h1>
+        <div class="img img4"></div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem animi ipsam itaque
+            doloribus aliquid, veniam minus laborum doloremque quos ullam. Quas harum iure
+            optio dolorem ea recusandae blanditiis ipsum praesentium.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+            tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+            voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+            architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+            laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+            ratione suscipit!
+        </p>
+        <div class="img img5"></div>
+
+        <h1>like these sweet mornings of spring </h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto suscipit
+            ducimus nostrum, aut minus eius impedit vero numquam est optio reprehenderit
+            itaque quis eligendi quasi repellendus obcaecati neque dolor ipsam nulla
+            praesentium voluptatum. Est assumenda ea voluptatibus! Eaque quo ducimus, unde
+            maxime enim nesciunt debitis voluptatem fuga obcaecati? Aperiam?
+        </p>
+
+    </div>
+</div>
+
+<script>
+    const body = document.body,
+        scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+        height = scrollWrap.getBoundingClientRect().height - 1,
+        speed = 0.02;
+
+    let offset = 0
+
+    body.style.height = Math.floor(height) + "px";
+
+    function smoothScroll(){
+        offset += (window.pageYOffset - offset) * speed;
+
+        let scroll = "translateY(-" + offset + "px) translateZ(0)";
+        scrollWrap.style.transform = scroll;
+
+        requestAnimationFrame(smoothScroll);
+    }
+
+    smoothScroll();
+
+</script>
+
+</body>
+</html>

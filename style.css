@@ -1,0 +1,52 @@
+html{
+    overflow-x: hidden;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    background: #040404;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+body{
+    overflow: hidden;
+    width: 100%;
+}
+.smooth-scroll-wrapper{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.content{
+    width: 50%;
+    margin: 160px auto;
+}
+h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+.img{
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    margin: 40px auto;
+    filter: sepia(60%);
+}
+.img1{
+    background: url(img1.jpg) no-repeat  50% 50%;
+}
+.img2{
+    background: url(img2.jpg) no-repeat  50% 50%;
+}
+.img3{
+    background: url(img3.jpg) no-repeat  50% 50%;
+}
+.img4{
+    background: url(img4.jpg) no-repeat  50% 50%;
+}
+.img5{
+    background: url(img5.jpg) no-repeat  50% 50%;
+}
